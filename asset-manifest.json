@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Bizzare/static/css/main.dead6484.css",
+    "main.js": "/Bizzare/static/js/main.bd824a9f.js",
+    "static/js/453.ed3810f9.chunk.js": "/Bizzare/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/Bizzare/index.html",
+    "main.dead6484.css.map": "/Bizzare/static/css/main.dead6484.css.map",
+    "main.bd824a9f.js.map": "/Bizzare/static/js/main.bd824a9f.js.map",
+    "453.ed3810f9.chunk.js.map": "/Bizzare/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dead6484.css",
+    "static/js/main.bd824a9f.js"
+  ]
+}
