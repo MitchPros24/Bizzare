@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
+  animation: backgroundShift 10s infinite alternate;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar Styling */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  background-color: #6a0572;
+  padding: 15px 25px;
+  color: #ffeb3b;
+  border-bottom: 5px dashed #ff5722;
+  box-shadow: 0 0 15px #ff5722;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffeb3b;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #ff5722;
+  transform: rotate(-5deg);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #ffeb3b;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  background: #ff5722;
+  border: 3px solid #ffeb3b;
+  border-radius: 10px;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+  box-shadow: 0 0 10px #ffeb3b;
+}
+
+.nav-item:hover {
+  background-color: #ffeb3b;
+  color: #6a0572;
+  transform: scale(1.2) rotate(10deg);
+  border-radius: 50%;
+}
+
+/* Section Styling */
+.section {
+  padding: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #6a0572;
+  background: repeating-linear-gradient(45deg, #ffeb3b, #ffeb3b 10px, #ff5722 10px, #ff5722 20px);
+  min-height: calc(100vh - 80px); /* Adjust for navbar height */
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 10px dotted #6a0572;
+  animation: bounce 3s infinite;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-item {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
   }
 }
